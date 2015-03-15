@@ -24,6 +24,8 @@ Currently running version **1.5.0** of Docker
     export DOCKER_CERT_PATH=<path to your home dir>/Workspace/docker/vagrant/tls
     export DOCKER_HOST=tcp://boot2docker:2376
     export DOCKER_TLS_VERIFY=1
+    export DOCKER_HOST_VAGRANT_FILE=$HOME/Workspace/docker/vagrant/Vagrantfile
+    export DOCKER_HOST_VAGRANT_NAME="zg-docker-host"
     ```
 
 5. Once you have a Docker client installed on your host (see below) you should be able to run `docker ps` and get a positive output
