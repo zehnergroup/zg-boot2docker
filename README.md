@@ -48,5 +48,3 @@ brew install docker
 ### `vagrant reload`
 
 Something is wonky with our base box. If you run `vagrant reload` on on of your Docker projects, you might get an error. This error is harmeless, and if you just run `vagrant up` right after it, all will be well.
-
-If you want to avoid this error, just run `vagrant destroy` then `vagrant up` to avoid it.
