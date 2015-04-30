@@ -48,3 +48,10 @@ brew install docker
 ### `vagrant reload`
 
 Something is wonky with our base box. If you run `vagrant reload` on on of your Docker projects, you might get an error. This error is harmeless, and if you just run `vagrant up` right after it, all will be well.
+
+### System restart needed
+
+Sometimes you need to restart OSX after installing docker. We were getting a certificate missing error, and `docker ps` was not working.
+
+
+
