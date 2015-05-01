@@ -45,13 +45,38 @@ brew install docker
 
 ## Known Issues
 
-### `vagrant reload`
+If you see this error when running `docker ps`:
+
+   FATA[0003] An error occurred trying to connect: Get https://boot2docker:2376/v1.18/containers/json: EOF
+
+It must have happened that the ports are not properly forwarded. 
+To solve this you must run a `vagrant reload`
+
+### Error when `vagrant reload`
 
 Something is wonky with our base box. If you run `vagrant reload` on on of your Docker projects, you might get an error. This error is harmeless, and if you just run `vagrant up` right after it, all will be well.
 
 ### System restart needed
 
 Sometimes you need to restart OSX after installing docker. We were getting a certificate missing error, and `docker ps` was not working.
+
+### Docker version issue
+
+If you see this error when running `docker ps`:
+
+   FATA[0000] Error response from daemon: client and server don't have same version (client : 1.18, server: 1.17)
+
+The VM has docker 1.5, so you must make the same version outside. In order to install the same version you must:
+   
+   # unlink your current version
+   brew unlink docker
+   # search for available versions
+   brew search docker
+   # installing the correct version
+   brew install homebrew/versions/docker150
+
+
+
 
 
 
