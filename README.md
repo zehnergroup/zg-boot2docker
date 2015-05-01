@@ -45,6 +45,8 @@ brew install docker
 
 ## Known Issues
 
+### Port forwarding error
+
 If you see this error when running `docker ps`:
 
    FATA[0003] An error occurred trying to connect: Get https://boot2docker:2376/v1.18/containers/json: EOF
