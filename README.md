@@ -2,7 +2,7 @@
 
 This Vagrant VM is meant to act as Proxy VM for other Vagrant based Docker setups.
 
-Currently running version **1.5.0** of Docker
+Currently running version **1.7.1** of Docker
 
 ## Getting Started
 
@@ -22,9 +22,7 @@ Currently running version **1.5.0** of Docker
 
     ```
     # Docker
-    export DOCKER_CERT_PATH=$HOME/Workspace/docker/vagrant/tls
-    export DOCKER_HOST=tcp://boot2docker:2376
-    export DOCKER_TLS_VERIFY=1
+    export DOCKER_HOST=tcp://boot2docker:2375
     export DOCKER_HOST_VAGRANT_FILE=$HOME/Workspace/docker/vagrant/Vagrantfile
     export DOCKER_HOST_VAGRANT_NAME="zg-docker-host"
     ```
@@ -51,7 +49,7 @@ If you see this error when running `docker ps`:
 
    FATA[0003] An error occurred trying to connect: Get https://boot2docker:2376/v1.18/containers/json: EOF
 
-It must have happened that the ports are not properly forwarded. 
+It must have happened that the ports are not properly forwarded.
 To solve this you must run a `vagrant reload`
 
 ### Error when `vagrant reload`
@@ -68,17 +66,11 @@ If you see this error when running `docker ps`:
 
    FATA[0000] Error response from daemon: client and server don't have same version (client : 1.18, server: 1.17)
 
-The VM has docker 1.5, so you must make the same version outside. In order to install the same version you must:
-   
+The VM has docker 1.7.1, so you must make the same version outside. In order to install the same version you must:
+
    # unlink your current version
    brew unlink docker
    # search for available versions
    brew search docker
    # installing the correct version
-   brew install homebrew/versions/docker150
-
-
-
-
-
-
+   brew install homebrew/versions/docker
