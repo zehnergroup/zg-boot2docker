@@ -68,9 +68,15 @@ If you see this error when running `docker ps`:
 
 The VM has docker 1.7.1, so you must make the same version outside. In order to install the same version you must:
 
-   # unlink your current version
-   brew unlink docker
-   # search for available versions
-   brew search docker
-   # installing the correct version
-   brew install homebrew/versions/docker
+```
+# unlink your current version
+brew unlink docker
+# search for available versions
+brew search docker
+# installing the correct version
+brew install homebrew/versions/docker171
+# then link your new version
+brew link docker171
+# check it now with
+docker --version
+```
