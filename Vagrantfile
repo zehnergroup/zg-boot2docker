@@ -2,6 +2,10 @@
 
 Vagrant.configure("2") do |config|
 
+  if Vagrant.has_plugin?("vagrant-vbguest") then
+    config.vbguest.auto_update = false
+  end
+
   config.vm.define "zg-docker-host", primary: true do |dhost|
 
     dhost.vm.box = "ailispaw/rancheros-lite"
