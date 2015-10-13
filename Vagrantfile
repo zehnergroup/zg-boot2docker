@@ -17,11 +17,11 @@ Vagrant.configure("2") do |config|
       v.memory = 2048
     end
 
-    dhost.vm.network "forwarded_port", guest: 8080, host: 8080
-    dhost.vm.network "forwarded_port", guest: 3000, host: 3000
-    dhost.vm.network "forwarded_port", guest: 3232, host: 3232
-    dhost.vm.network "forwarded_port", guest: 8888, host: 8888
-    dhost.vm.network "forwarded_port", guest: 8003, host: 8003
+    # dhost.vm.network "forwarded_port", guest: 8080, host: 8080
+    # dhost.vm.network "forwarded_port", guest: 3000, host: 3000
+    # dhost.vm.network "forwarded_port", guest: 3232, host: 3232
+    # dhost.vm.network "forwarded_port", guest: 8888, host: 8888
+    # dhost.vm.network "forwarded_port", guest: 8003, host: 8003
 
   end
 
